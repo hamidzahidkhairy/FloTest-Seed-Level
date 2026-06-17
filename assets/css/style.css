@@ -1,0 +1,592 @@
+/* Reset sederhana */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f9;
+    color: #333;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ===== LOGIN ===== */
+
+header {
+    background-color: #6b4fbf;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+}
+
+header a {
+    text-decoration: none;
+}
+
+.logout-btn {
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+
+    width: auto;
+    padding: 10px 20px;
+    background-color: #5a3fa8;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.logout-btn:hover {
+    background-color: #4a2f8a;
+}
+
+main {
+    padding: 30px;
+    flex: 1;
+}
+
+section {
+    background-color: white;
+    max-width: 400px;
+    margin: auto;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+section h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: #6b4fbf;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.role-nav{
+    margin-top: 30px;
+    text-align: center;
+    padding: 25px;
+    background-color: #f8f9fa;
+    border-radius: 10px;
+}
+
+.role-nav h3{
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.role-nav a{
+    text-decoration: none;
+}
+
+.role-nav button{
+    width: 110px;
+    padding: 12px;
+    margin: 5px;
+    border: none;
+    border-radius: 8px;
+    background-color: #6b4fbf;
+    color: white;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.role-nav button:hover{
+    background-color: #5a3fa8;
+}
+
+button:hover {
+    background-color: #5a3fa8;
+}
+
+/* ===== DASHBOARD ===== */
+
+.dashboard-hero {
+    max-width: 1000px;
+    margin: 0 auto 30px;
+    padding: 32px 28px;
+    background: linear-gradient(135deg, #6b4fbf, #7d5fc8);
+    border-radius: 24px;
+    color: white;
+    box-shadow: 0 18px 40px rgba(107, 79, 191, 0.16);
+}
+
+.dashboard-hero h2 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.dashboard-hero p {
+    max-width: 720px;
+    font-size: 16px;
+    line-height: 1.7;
+    opacity: 0.95;
+}
+
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    max-width: 1000px;
+    margin: 0 auto 30px;
+}
+
+.dashboard-card {
+    background-color: white;
+    border-radius: 20px;
+    padding: 28px 24px;
+    box-shadow: 0 16px 30px rgba(0, 0, 0, 0.06);
+    border-top: 5px solid #6b4fbf;
+}
+
+.dashboard-card h2 {
+    font-size: 18px;
+    color: #6b4fbf;
+    margin-bottom: 14px;
+}
+
+.dashboard-card p {
+    font-size: 38px;
+    margin: 0 0 10px;
+    color: #333;
+    font-weight: 700;
+}
+
+.dashboard-card span {
+    color: #666;
+    font-size: 14px;
+}
+
+.dashboard-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    justify-content: center;
+    margin: 0 auto 30px;
+    max-width: 1000px;
+}
+
+.dashboard-actions a {
+    display: inline-block;
+    width: min(260px, 100%);
+}
+
+.dashboard-actions button {
+    width: 100%;
+}
+
+.header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 18px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.brand-label {
+    font-size: 12px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    opacity: 0.8;
+    margin-bottom: 8px;
+}
+
+.page-subtitle {
+    font-size: 14px;
+    color: #f0ecff;
+    margin-top: 8px;
+    max-width: 560px;
+}
+
+nav {
+   
+    padding: 15px;
+    text-align: center;
+}
+
+nav a {
+    text-decoration: none;
+}
+
+nav button {
+    width: auto;
+    margin: 0 10px;
+    padding: 10px 20px;
+}
+
+article {
+    margin-bottom: 20px;
+}
+
+article h3 {
+    margin-bottom: 10px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+}
+
+th,
+td {
+    border: 1px solid #dddddd;
+    padding: 12px;
+    text-align: center;
+}
+
+th {
+    background-color: #6b4fbf;
+    color: white;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    margin-top: 30px;
+    background-color: #6b4fbf;
+    color: white;
+}
+
+/* ===== MENTOR ===== */
+
+/* Dashboard Mentor */
+.mentor-dashboard {
+   display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+}
+
+.mentor-dashboard article {
+    width: 220px;
+    padding: 25px;
+    text-align: center;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.mentor-dashboard h2 {
+    margin-bottom: 20px;
+}
+
+.mentor-dashboard table {
+    margin-top: 20px;
+}
+
+/* Menu Mentor */
+.mentor-menu {
+   max-width: 600px;
+    margin: auto;
+    text-align: center;
+}
+
+.mentor-menu h2 {
+    margin-bottom: 20px;
+}
+
+.mentor-menu nav {
+     display: flex;
+    justify-content: center;
+    gap: 20px;
+    background-color: transparent;
+    padding: 0;
+}
+
+.mentor-menu nav button {
+    width: 170px;
+    padding: 14px;
+    border-radius: 8px;
+}
+
+/* Halaman Daftar Tes */
+.mentor-table {
+    max-width: 900px;
+    margin: auto;
+}
+
+.mentor-table table {
+    margin-top: 20px;
+}
+
+/* Tombol kembali */
+.back-nav {
+    margin-top: 50px;
+    padding:20px;
+    text-align: center;
+    background-color: transparent;
+}
+
+.back-nav button {
+    width: auto;
+    padding: 12px 25px;
+}
+
+/* Form Buat Tes */
+.mentor-form {
+    max-width: 600px;
+    margin: auto;
+}
+
+.mentor-form p {
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.mentor-form textarea,
+.mentor-form select {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    font-family: Arial, sans-serif;
+}
+
+.mentor-form button {
+    width: 100%;
+}
+
+/* ===== TAKE TEST MENTI ===== */
+
+.test-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Progress Section */
+.progress-section {
+    margin-bottom: 40px;
+}
+
+.progress-text {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 8px;
+    background-color: #e0e0e0;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #6b4fbf, #7d5fc8);
+    transition: width 0.3s ease;
+}
+
+.menti-test {
+    background-color: white;
+    padding: 40px 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(107, 79, 191, 0.1);
+}
+
+/* Question Number */
+.question-number {
+    font-size: 60px;
+    font-weight: bold;
+    color: #6b4fbf;
+    margin-bottom: 20px;
+    opacity: 0.2;
+}
+
+/* Test Info */
+.test-info {
+    margin-bottom: 30px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #f0f0f0;
+}
+
+.test-info h3 {
+    font-size: 18px;
+    color: #6b4fbf;
+    margin: 0;
+    font-weight: 600;
+}
+
+/* Question Section */
+.question-section {
+    margin-bottom: 35px;
+}
+
+.question-section h2 {
+    font-size: 24px;
+    color: #333;
+    margin: 0;
+    line-height: 1.4;
+}
+
+/* Options Form */
+.options-form {
+    margin-bottom: 35px;
+}
+
+/* Pilihan jawaban */
+.option {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    padding: 16px 18px;
+    margin-bottom: 12px;
+    border: 2px solid #e8e8e8;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background-color: #fafafa;
+}
+
+.option:hover {
+    border-color: #6b4fbf;
+    background-color: #f3f0f8;
+    box-shadow: 0 2px 8px rgba(107, 79, 191, 0.1);
+}
+
+.option input[type="radio"] {
+    width: 20px;
+    height: 20px;
+    margin: 2px 0 0 0;
+    cursor: pointer;
+    flex-shrink: 0;
+    accent-color: #6b4fbf;
+}
+
+.option-letter {
+    font-weight: 700;
+    color: #6b4fbf;
+    font-size: 16px;
+    min-width: 25px;
+}
+
+.option-text {
+    color: #333;
+    font-size: 15px;
+    line-height: 1.4;
+}
+
+/* Navigation Buttons */
+.test-nav {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.btn-primary,
+.btn-secondary {
+    flex: 1;
+    padding: 14px 24px;
+    font-size: 15px;
+    font-weight: 600;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-primary {
+    background-color: #6b4fbf;
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: #5a3fa8;
+    box-shadow: 0 4px 12px rgba(107, 79, 191, 0.3);
+}
+
+.btn-secondary {
+    background-color: #e8e8e8;
+    color: #333;
+}
+
+.btn-secondary:hover {
+    background-color: #d8d8d8;
+}
+
+/* Submit Button */
+.submit-nav {
+    margin-bottom: 15px;
+}
+
+.submit-nav a {
+    text-decoration: none;
+    display: block;
+}
+
+.btn-submit {
+    width: 100%;
+    padding: 16px 24px;
+    font-size: 16px;
+    font-weight: 700;
+    border: none;
+    border-radius: 10px;
+    background: linear-gradient(135deg, #6b4fbf, #7d5fc8);
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-submit:hover {
+    box-shadow: 0 6px 16px rgba(107, 79, 191, 0.4);
+    transform: translateY(-2px);
+}
+
+/* Back Button */
+.back-nav {
+    text-align: center;
+    padding: 0;
+    background-color: transparent;
+}
+
+.back-nav a {
+    text-decoration: none;
+}
+
+.btn-back {
+    width: 100%;
+    padding: 12px 24px;
+    font-size: 14px;
+    font-weight: 600;
+    border: 2px solid #6b4fbf;
+    border-radius: 10px;
+    background-color: transparent;
+    color: #6b4fbf;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-back:hover {
+    background-color: #6b4fbf;
+    color: white;
+}

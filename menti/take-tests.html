@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kerjakan Tes</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Kerjakan Tes</h1>
+
+        <a href="../index.html">
+            <button type="button" class="logout-btn">
+                Logout
+            </button>
+        </a>
+    </header>
+
+    <main>
+        <div class="test-container">
+            <!-- Progress Bar -->
+            <div class="progress-section">
+                <p class="progress-text">Soal 1 dari 10</p>
+                <div class="progress-bar">
+                    <div class="progress-fill" style="width: 10%;"></div>
+                </div>
+            </div>
+
+            <section class="menti-test">
+
+                <!-- Question Number -->
+                <div class="question-number">01</div>
+
+                <!-- Test Name -->
+                <div class="test-info">
+                    <h3>HTML Basic Test</h3>
+                </div>
+
+                <!-- Question -->
+                <div class="question-section">
+                    <h2>Apa fungsi HTML?</h2>
+                </div>
+
+                <!-- Options -->
+                <form class="options-form">
+                    <label class="option">
+                        <input type="radio" name="jawaban" class="radio-input">
+                        <span class="option-letter">A</span>
+                        <span class="option-text">HyperText Markup Language</span>
+                    </label>
+
+                    <label class="option">
+                        <input type="radio" name="jawaban" class="radio-input">
+                        <span class="option-letter">B</span>
+                        <span class="option-text">HyperText Markdown Language</span>
+                    </label>
+
+                    <label class="option">
+                        <input type="radio" name="jawaban" class="radio-input">
+                        <span class="option-letter">C</span>
+                        <span class="option-text">HighText Machine Language</span>
+                    </label>
+
+                    <label class="option">
+                        <input type="radio" name="jawaban" class="radio-input">
+                        <span class="option-letter">D</span>
+                        <span class="option-text">Home Tool Markup Language</span>
+                    </label>
+                </form>
+
+                <!-- Navigation Buttons -->
+                <nav class="test-nav">
+                    <button type="button" class="btn-secondary">
+                        ← Sebelumnya
+                    </button>
+
+                    <button type="button" class="btn-primary">
+                        Selanjutnya →
+                    </button>
+                </nav>
+
+                <!-- Submit Button -->
+                <nav class="submit-nav">
+                    <a href="result.html">
+                        <button type="submit" class="btn-submit">
+                            ✓ Submit Jawaban
+                        </button>
+                    </a>
+                </nav>
+
+                <!-- Back Button -->
+                <nav class="back-nav">
+                    <a href="dashboard.html">
+                        <button type="button" class="btn-back">
+                            ← Kembali ke Dashboard
+                        </button>
+                    </a>
+                </nav>
+
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Flotest</p>
+    </footer>
+
+</body>
+</html>
