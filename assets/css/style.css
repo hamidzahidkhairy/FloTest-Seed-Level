@@ -1,9 +1,16 @@
-/* Reset sederhana */
+/* ============================================
+   RESET - CSS Reset & Base Styles
+   ============================================ */
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
+/* ============================================
+   GLOBAL - Global Styles & Typography
+   ============================================ */
 
 body {
     font-family: Arial, sans-serif;
@@ -14,7 +21,31 @@ body {
     flex-direction: column;
 }
 
-/* ===== LOGIN ===== */
+input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: #6b4fbf;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #5a3fa8;
+}
+
+/* ============================================
+   LAYOUT - Layout Structure & Containers
+   ============================================ */
 
 header {
     background-color: #6b4fbf;
@@ -26,25 +57,6 @@ header {
 
 header a {
     text-decoration: none;
-}
-
-.logout-btn {
-    position: absolute;
-    top: 50%;
-    right: 20px;
-    transform: translateY(-50%);
-
-    width: auto;
-    padding: 10px 20px;
-    background-color: #5a3fa8;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.logout-btn:hover {
-    background-color: #4a2f8a;
 }
 
 main {
@@ -66,25 +78,156 @@ section h2 {
     margin-bottom: 20px;
 }
 
-input {
-    width: 100%;
-    padding: 12px;
-    margin-bottom: 15px;
-    border: 1px solid #cccccc;
-    border-radius: 5px;
+nav {
+    padding: 15px;
+    text-align: center;
 }
 
-button {
+nav a {
+    text-decoration: none;
+}
+
+nav button {
+    width: auto;
+    margin: 0 10px;
+    padding: 10px 20px;
+}
+
+article {
+    margin-bottom: 20px;
+}
+
+article h3 {
+    margin-bottom: 10px;
+}
+
+table {
     width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+}
+
+th,
+td {
+    border: 1px solid #dddddd;
     padding: 12px;
+    text-align: center;
+}
+
+th {
     background-color: #6b4fbf;
+    color: white;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    margin-top: 30px;
+    background-color: #6b4fbf;
+    color: white;
+}
+
+.header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 18px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* ============================================
+   COMPONENTS - Reusable UI Components
+   ============================================ */
+
+/* --- Buttons --- */
+.logout-btn {
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    width: auto;
+    padding: 10px 20px;
+    background-color: #5a3fa8;
     color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
 }
 
-.role-nav{
+.logout-btn:hover {
+    background-color: #4a2f8a;
+}
+
+.btn-primary,
+.btn-secondary {
+    flex: 1;
+    padding: 14px 24px;
+    font-size: 15px;
+    font-weight: 600;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-primary {
+    background-color: #6b4fbf;
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: #5a3fa8;
+    box-shadow: 0 4px 12px rgba(107, 79, 191, 0.3);
+}
+
+.btn-secondary {
+    background-color: #e8e8e8;
+    color: #333;
+}
+
+.btn-secondary:hover {
+    background-color: #d8d8d8;
+}
+
+.btn-submit {
+    width: 100%;
+    padding: 16px 24px;
+    font-size: 16px;
+    font-weight: 700;
+    border: none;
+    border-radius: 10px;
+    background: linear-gradient(135deg, #6b4fbf, #7d5fc8);
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-submit:hover {
+    box-shadow: 0 6px 16px rgba(107, 79, 191, 0.4);
+    transform: translateY(-2px);
+}
+
+.btn-back {
+    width: 100%;
+    padding: 12px 24px;
+    font-size: 14px;
+    font-weight: 600;
+    border: 2px solid #6b4fbf;
+    border-radius: 10px;
+    background-color: transparent;
+    color: #6b4fbf;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-back:hover {
+    background-color: #6b4fbf;
+    color: white;
+}
+
+/* --- Role Navigation --- */
+.role-nav {
     margin-top: 30px;
     text-align: center;
     padding: 25px;
@@ -92,16 +235,16 @@ button {
     border-radius: 10px;
 }
 
-.role-nav h3{
+.role-nav h3 {
     margin-bottom: 20px;
     color: #333;
 }
 
-.role-nav a{
+.role-nav a {
     text-decoration: none;
 }
 
-.role-nav button{
+.role-nav button {
     width: 110px;
     padding: 12px;
     margin: 5px;
@@ -113,16 +256,11 @@ button {
     font-size: 15px;
 }
 
-.role-nav button:hover{
+.role-nav button:hover {
     background-color: #5a3fa8;
 }
 
-button:hover {
-    background-color: #5a3fa8;
-}
-
-/* ===== DASHBOARD ===== */
-
+/* --- Dashboard Hero --- */
 .dashboard-hero {
     max-width: 1000px;
     margin: 0 auto 30px;
@@ -145,6 +283,7 @@ button:hover {
     opacity: 0.95;
 }
 
+/* --- Dashboard Grid --- */
 .dashboard-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -197,85 +336,9 @@ button:hover {
     width: 100%;
 }
 
-.header-inner {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 18px;
-    max-width: 1000px;
-    margin: 0 auto;
-}
-
-.brand-label {
-    font-size: 12px;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    opacity: 0.8;
-    margin-bottom: 8px;
-}
-
-.page-subtitle {
-    font-size: 14px;
-    color: #f0ecff;
-    margin-top: 8px;
-    max-width: 560px;
-}
-
-nav {
-   
-    padding: 15px;
-    text-align: center;
-}
-
-nav a {
-    text-decoration: none;
-}
-
-nav button {
-    width: auto;
-    margin: 0 10px;
-    padding: 10px 20px;
-}
-
-article {
-    margin-bottom: 20px;
-}
-
-article h3 {
-    margin-bottom: 10px;
-}
-
-table {
-    width: 100%;
-    border-collapse: collapse;
-    background-color: white;
-}
-
-th,
-td {
-    border: 1px solid #dddddd;
-    padding: 12px;
-    text-align: center;
-}
-
-th {
-    background-color: #6b4fbf;
-    color: white;
-}
-
-footer {
-    text-align: center;
-    padding: 20px;
-    margin-top: 30px;
-    background-color: #6b4fbf;
-    color: white;
-}
-
-/* ===== MENTOR ===== */
-
-/* Dashboard Mentor */
+/* --- Mentor Dashboard --- */
 .mentor-dashboard {
-   display: flex;
+    display: flex;
     justify-content: center;
     gap: 25px;
     flex-wrap: wrap;
@@ -299,9 +362,9 @@ footer {
     margin-top: 20px;
 }
 
-/* Menu Mentor */
+/* --- Mentor Menu --- */
 .mentor-menu {
-   max-width: 600px;
+    max-width: 600px;
     margin: auto;
     text-align: center;
 }
@@ -311,7 +374,7 @@ footer {
 }
 
 .mentor-menu nav {
-     display: flex;
+    display: flex;
     justify-content: center;
     gap: 20px;
     background-color: transparent;
@@ -324,7 +387,7 @@ footer {
     border-radius: 8px;
 }
 
-/* Halaman Daftar Tes */
+/* --- Mentor Table --- */
 .mentor-table {
     max-width: 900px;
     margin: auto;
@@ -334,20 +397,7 @@ footer {
     margin-top: 20px;
 }
 
-/* Tombol kembali */
-.back-nav {
-    margin-top: 50px;
-    padding:20px;
-    text-align: center;
-    background-color: transparent;
-}
-
-.back-nav button {
-    width: auto;
-    padding: 12px 25px;
-}
-
-/* Form Buat Tes */
+/* --- Mentor Form --- */
 .mentor-form {
     max-width: 600px;
     margin: auto;
@@ -372,15 +422,14 @@ footer {
     width: 100%;
 }
 
-/* ===== TAKE TEST MENTI ===== */
-
+/* --- Test Container --- */
 .test-container {
     max-width: 800px;
     margin: 0 auto;
     padding: 20px;
 }
 
-/* Progress Section */
+/* --- Progress Section --- */
 .progress-section {
     margin-bottom: 40px;
 }
@@ -406,6 +455,7 @@ footer {
     transition: width 0.3s ease;
 }
 
+/* --- Menti Test --- */
 .menti-test {
     background-color: white;
     padding: 40px 30px;
@@ -413,7 +463,6 @@ footer {
     box-shadow: 0 4px 12px rgba(107, 79, 191, 0.1);
 }
 
-/* Question Number */
 .question-number {
     font-size: 60px;
     font-weight: bold;
@@ -422,7 +471,6 @@ footer {
     opacity: 0.2;
 }
 
-/* Test Info */
 .test-info {
     margin-bottom: 30px;
     padding-bottom: 15px;
@@ -436,7 +484,7 @@ footer {
     font-weight: 600;
 }
 
-/* Question Section */
+/* --- Question Section --- */
 .question-section {
     margin-bottom: 35px;
 }
@@ -448,12 +496,11 @@ footer {
     line-height: 1.4;
 }
 
-/* Options Form */
+/* --- Options Form & Options --- */
 .options-form {
     margin-bottom: 35px;
 }
 
-/* Pilihan jawaban */
 .option {
     display: flex;
     align-items: flex-start;
@@ -495,7 +542,7 @@ footer {
     line-height: 1.4;
 }
 
-/* Navigation Buttons */
+/* --- Test Navigation --- */
 .test-nav {
     display: flex;
     justify-content: space-between;
@@ -503,38 +550,24 @@ footer {
     margin-bottom: 20px;
 }
 
-.btn-primary,
-.btn-secondary {
-    flex: 1;
-    padding: 14px 24px;
-    font-size: 15px;
-    font-weight: 600;
-    border: none;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: all 0.3s ease;
+/* --- Back Navigation --- */
+.back-nav {
+    margin-top: 50px;
+    padding: 20px;
+    text-align: center;
+    background-color: transparent;
 }
 
-.btn-primary {
-    background-color: #6b4fbf;
-    color: white;
+.back-nav a {
+    text-decoration: none;
 }
 
-.btn-primary:hover {
-    background-color: #5a3fa8;
-    box-shadow: 0 4px 12px rgba(107, 79, 191, 0.3);
+.back-nav button {
+    width: auto;
+    padding: 12px 25px;
 }
 
-.btn-secondary {
-    background-color: #e8e8e8;
-    color: #333;
-}
-
-.btn-secondary:hover {
-    background-color: #d8d8d8;
-}
-
-/* Submit Button */
+/* --- Submit Navigation --- */
 .submit-nav {
     margin-bottom: 15px;
 }
@@ -544,49 +577,21 @@ footer {
     display: block;
 }
 
-.btn-submit {
-    width: 100%;
-    padding: 16px 24px;
-    font-size: 16px;
-    font-weight: 700;
-    border: none;
-    border-radius: 10px;
-    background: linear-gradient(135deg, #6b4fbf, #7d5fc8);
-    color: white;
-    cursor: pointer;
-    transition: all 0.3s ease;
+/* ============================================
+   UTILITIES - Utility Classes & Helpers
+   ============================================ */
+
+.brand-label {
+    font-size: 12px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    opacity: 0.8;
+    margin-bottom: 8px;
 }
 
-.btn-submit:hover {
-    box-shadow: 0 6px 16px rgba(107, 79, 191, 0.4);
-    transform: translateY(-2px);
-}
-
-/* Back Button */
-.back-nav {
-    text-align: center;
-    padding: 0;
-    background-color: transparent;
-}
-
-.back-nav a {
-    text-decoration: none;
-}
-
-.btn-back {
-    width: 100%;
-    padding: 12px 24px;
+.page-subtitle {
     font-size: 14px;
-    font-weight: 600;
-    border: 2px solid #6b4fbf;
-    border-radius: 10px;
-    background-color: transparent;
-    color: #6b4fbf;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-.btn-back:hover {
-    background-color: #6b4fbf;
-    color: white;
+    color: #f0ecff;
+    margin-top: 8px;
+    max-width: 560px;
 }
