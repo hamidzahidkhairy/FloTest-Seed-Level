@@ -409,6 +409,113 @@ footer {
     margin-top: 20px;
 }
 
+/* --- Users Table & Actions --- */
+.users-section {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    background-color: white;
+    overflow-x: auto;
+}
+
+.users-table {
+    min-width: 700px;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.users-table thead th {
+    background-color: #6b4fbf;
+    color: white;
+    text-transform: uppercase;
+    font-size: 14px;
+    letter-spacing: 0.6px;
+}
+
+.users-table tbody tr:nth-child(odd) {
+    background-color: #fbfbfd;
+}
+
+.users-table td {
+    text-align: left;
+}
+
+.users-table td.actions {
+    text-align: center;
+}
+
+.btn-edit {
+    display: inline-block;
+    padding: 8px 12px;
+    margin-right: 8px;
+    background-color: #6b4fbf;
+    color: #fff;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.btn-edit:hover {
+    background-color: #5a3fa8;
+}
+
+.btn-delete {
+    padding: 8px 12px;
+    background-color: #e74c3c;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.btn-delete:hover {
+    background-color: #c0392b;
+}
+
+/* --- Users Form --- */
+.users-form {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #333;
+    font-size: 14px;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    font-size: 15px;
+    font-family: Arial, sans-serif;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    outline: none;
+    border-color: #6b4fbf;
+    box-shadow: 0 0 0 3px rgba(107, 79, 191, 0.1);
+}
+
+.form-actions {
+    margin-top: 30px;
+    text-align: center;
+}
+
 /* --- Mentor Form --- */
 .mentor-form {
     max-width: 600px;

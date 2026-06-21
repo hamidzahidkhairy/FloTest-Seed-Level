@@ -12,7 +12,39 @@
 </header>
 
 <main>
-    <section></section>
+    <section class="users-section">
+        <h1>Create User</h1>
+        <form class="users-form" action="index.html" method="get">
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" placeholder="Full name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="email@example.com" required>
+            </div>
+
+            <div class="form-group">
+                <label for="role">Role</label>
+                <select id="role" name="role" required>
+                    <option value="">-- Select Role --</option>
+                    <option value="Admin">Admin</option>
+                    <option value="Mentor">Mentor</option>
+                    <option value="Menti">Menti</option>
+                </select>
+            </div>
+
+            <div class="form-actions">
+                <button type="submit" class="btn-submit">Submit</button>
+            </div>
+        </form>
+        <div class="back-nav">
+            <a href="../dashboard.html">
+                <button type="button" class="btn-back">Kembali ke Dashboard</button>
+            </a>
+        </div>
+    </section>
 </main>
 
 <footer></footer> 

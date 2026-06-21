@@ -12,9 +12,108 @@
 </header>
 
 <main>
-    <section></section>
+    <section class="users-section">
+        <h1>Users</h1>
+        <table class="users-table" border="1" cellpadding="8" cellspacing="0">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Role</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Alice Admin</td>
+                    <td>alice.admin@example.com</td>
+                    <td>Admin</td>
+                    <td>
+                        <a href="edit.html?id=1" class="btn-edit">Edit</a>
+                        <button class="btn-delete" data-id="1">Delete</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Bob Mentor</td>
+                    <td>bob.mentor@example.com</td>
+                    <td>Mentor</td>
+                    <td>
+                        <a href="edit.html?id=2" class="btn-edit">Edit</a>
+                        <button class="btn-delete" data-id="2">Delete</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Carol Mentor</td>
+                    <td>carol.mentor@example.com</td>
+                    <td>Mentor</td>
+                    <td>
+                        <a href="edit.html?id=3" class="btn-edit">Edit</a>
+                        <button class="btn-delete" data-id="3">Delete</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>David Menti</td>
+                    <td>david.menti@example.com</td>
+                    <td>Menti</td>
+                    <td>
+                        <a href="edit.html?id=4" class="btn-edit">Edit</a>
+                        <button class="btn-delete" data-id="4">Delete</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Eve Menti</td>
+                    <td>eve.menti@example.com</td>
+                    <td>Menti</td>
+                    <td>
+                        <a href="edit.html?id=5" class="btn-edit">Edit</a>
+                        <button class="btn-delete" data-id="5">Delete</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Frank Menti</td>
+                    <td>frank.menti@example.com</td>
+                    <td>Menti</td>
+                    <td>
+                        <a href="edit.html?id=6" class="btn-edit">Edit</a>
+                        <button class="btn-delete" data-id="6">Delete</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Grace Menti</td>
+                    <td>grace.menti@example.com</td>
+                    <td>Menti</td>
+                    <td>
+                        <a href="edit.html?id=7" class="btn-edit">Edit</a>
+                        <button class="btn-delete" data-id="7">Delete</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="back-nav">
+            <a href="../dashboard.html">
+                <button type="button" class="btn-back">Kembali ke Dashboard</button>
+            </a>
+        </div>
+    </section>
 </main>
 
 <footer></footer> 
+
+<script>
+    // Handle delete button
+    document.querySelectorAll('.btn-delete').forEach(button => {
+        button.addEventListener('click', function(e) {
+            e.preventDefault();
+            const userId = this.getAttribute('data-id');
+            const userName = this.closest('tr').querySelector('td').textContent;
+            
+            if (confirm(`Yakin ingin menghapus user ${userName}?`)) {
+                // Remove row from table
+                this.closest('tr').remove();
+                alert(`User ${userName} berhasil dihapus!`);
+            }
+        });
+    });
+</script>
 </body>
 </html>
