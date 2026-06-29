@@ -12,9 +12,111 @@
 </header>
 
 <main>
-    <section></section>
+    <section class="tests-section">
+        <h1>Questions</h1>
+        <p id="test-title" style="margin-bottom: 20px; font-size: 16px; color: #555;"></p>
+        <table class="tests-table" border="1" cellpadding="8" cellspacing="0">
+            <thead>
+                <tr>
+                    <th>Number</th>
+                    <th>Question Text</th>
+                    <th>Type</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="questions-body">
+            </tbody>
+        </table>
+        <div class="back-nav">
+            <a href="../index.html">
+                <button type="button" class="btn-back">Kembali ke Tests</button>
+            </a>
+        </div>
+    </section>
 </main>
 
 <footer></footer> 
+
+<script>
+    const testData = {
+        1: {
+            title: 'Dasar Pemrograman',
+            questions: [
+                'Apa yang dimaksud dengan variabel dalam pemrograman?',
+                'Tipe data apa yang digunakan untuk menyimpan teks dalam JavaScript?',
+                'Apa perbedaan antara == dan === dalam JavaScript?',
+                'Jelaskan apa itu loop dan berikan contoh penggunaannya',
+                'Apa fungsi dari statement if-else dalam sebuah program?'
+            ],
+            types: ['Short Answer', 'Multiple Choice', 'Multiple Choice', 'Short Answer', 'Short Answer']
+        },
+        2: {
+            title: 'Basis Data',
+            questions: [
+                'Apa yang dimaksud dengan database dan apa tujuannya?',
+                'Sebutkan 3 contoh sistem manajemen basis data (DBMS)',
+                'Apa itu primary key dan apa fungsinya dalam sebuah tabel?',
+                'Jelaskan perbedaan antara SQL dan NoSQL',
+                'Apa yang dimaksud dengan normalisasi database?'
+            ],
+            types: ['Short Answer', 'Multiple Choice', 'Short Answer', 'Short Answer', 'Short Answer']
+        },
+        3: {
+            title: 'Matematika',
+            questions: [
+                'Berapa hasil dari 15 + 23 - 8?',
+                'Jika x + 5 = 12, berapakah nilai x?',
+                'Apa rumus untuk menghitung keliling lingkaran?',
+                'Berapa luas segitiga dengan alas 10 cm dan tinggi 8 cm?',
+                'Jelaskan apa itu bilangan prima dan berikan 3 contoh'
+            ],
+            types: ['Multiple Choice', 'Short Answer', 'Short Answer', 'Multiple Choice', 'Short Answer']
+        }
+    };
+
+    function getQueryVariable(variable) {
+        const query = window.location.search.substring(1);
+        const vars = query.split('&');
+        for (let i = 0; i < vars.length; i++) {
+            const pair = vars[i].split('=');
+            if (decodeURIComponent(pair[0]) === variable) {
+                return decodeURIComponent(pair[1]);
+            }
+        }
+        return null;
+    }
+
+    const selectedTestId = getQueryVariable('test_id') || '1';
+    const selectedTest = testData[selectedTestId] || testData[1];
+
+    document.getElementById('test-title').textContent = `Menampilkan questions untuk test: ${selectedTest.title}`;
+
+    const tbody = document.getElementById('questions-body');
+    selectedTest.questions.forEach((questionText, index) => {
+        const row = document.createElement('tr');
+        row.innerHTML = `
+            <td>${index + 1}</td>
+            <td>${questionText}</td>
+            <td>${selectedTest.types[index]}</td>
+            <td>
+                <a href="edit.html?test_id=${selectedTestId}&question=${index + 1}" class="btn-edit">Edit</a>
+                <a href="#" class="btn-delete" data-id="${index + 1}">Delete</a>
+            </td>
+        `;
+        tbody.appendChild(row);
+    });
+
+    document.querySelectorAll('.btn-delete').forEach(button => {
+        button.addEventListener('click', function(e) {
+            e.preventDefault();
+            const number = this.getAttribute('data-id');
+            const questionText = this.closest('tr').querySelector('td:nth-child(2)').textContent;
+            if (confirm(`Yakin ingin menghapus question nomor ${number}?`)) {
+                this.closest('tr').remove();
+                alert(`Question nomor ${number} berhasil dihapus.`);
+            }
+        });
+    });
+</script>
 </body>
 </html>

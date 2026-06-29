@@ -12,7 +12,46 @@
 </header>
 
 <main>
-    <section></section>
+    <section class="tests-section">
+        <h1>Edit Test</h1>
+        <form class="tests-form" action="index.html" method="get">
+            <div class="form-group">
+                <label for="title">Title</label>
+                <input type="text" id="title" name="title" value="HTML Basic" required>
+            </div>
+
+            <div class="form-group">
+                <label for="description">Description</label>
+                <textarea id="description" name="description" rows="5" required>Test covering HTML fundamentals including semantic elements, forms, and accessibility basics.</textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="mentor">Mentor</label>
+                <select id="mentor" name="mentor" required>
+                    <option value="Bob Mentor" selected>Bob Mentor</option>
+                    <option value="Carol Mentor">Carol Mentor</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="status">Status</label>
+                <select id="status" name="status" required>
+                    <option value="Draft">Draft</option>
+                    <option value="Published" selected>Published</option>
+                    <option value="Archived">Archived</option>
+                </select>
+            </div>
+
+            <div class="form-actions">
+                <button type="submit" class="btn-submit">Update</button>
+            </div>
+        </form>
+        <div class="back-nav">
+            <a href="../dashboard.html">
+                <button type="button" class="btn-back">Kembali ke Dashboard</button>
+            </a>
+        </div>
+    </section>
 </main>
 
 <footer></footer> 

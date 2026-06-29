@@ -12,7 +12,55 @@
 </header>
 
 <main>
-    <section></section>
+    <section class="tests-section">
+        <h1>Create Question</h1>
+        <form class="tests-form" action="index.html" method="get">
+            <div class="form-group">
+                <label for="questionText">Question Text</label>
+                <textarea id="questionText" name="questionText" rows="4" placeholder="Type your question here" required></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="choiceA">Answer A</label>
+                <input type="text" id="choiceA" name="choiceA" placeholder="Option A" required>
+            </div>
+
+            <div class="form-group">
+                <label for="choiceB">Answer B</label>
+                <input type="text" id="choiceB" name="choiceB" placeholder="Option B" required>
+            </div>
+
+            <div class="form-group">
+                <label for="choiceC">Answer C</label>
+                <input type="text" id="choiceC" name="choiceC" placeholder="Option C" required>
+            </div>
+
+            <div class="form-group">
+                <label for="choiceD">Answer D</label>
+                <input type="text" id="choiceD" name="choiceD" placeholder="Option D" required>
+            </div>
+
+            <div class="form-group">
+                <label for="correctAnswer">Correct Answer</label>
+                <select id="correctAnswer" name="correctAnswer" required>
+                    <option value="">-- Select Correct Answer --</option>
+                    <option value="A">A</option>
+                    <option value="B">B</option>
+                    <option value="C">C</option>
+                    <option value="D">D</option>
+                </select>
+            </div>
+
+            <div class="form-actions">
+                <button type="submit" class="btn-submit">Submit</button>
+            </div>
+        </form>
+        <div class="back-nav">
+            <a href="index.html">
+                <button type="button" class="btn-back">Kembali ke Questions</button>
+            </a>
+        </div>
+    </section>
 </main>
 
 <footer></footer> 

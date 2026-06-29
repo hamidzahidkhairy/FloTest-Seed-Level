@@ -12,9 +12,108 @@
 </header>
 
 <main>
-    <section></section>
+    <section class="tests-section">
+        <h1>Edit Question</h1>
+        <form class="tests-form" action="index.html" method="get">
+            <div class="form-group">
+                <label for="questionText">Question Text</label>
+                <textarea id="questionText" name="questionText" rows="4" required></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="choiceA">Answer A</label>
+                <input type="text" id="choiceA" name="choiceA" required>
+            </div>
+
+            <div class="form-group">
+                <label for="choiceB">Answer B</label>
+                <input type="text" id="choiceB" name="choiceB" required>
+            </div>
+
+            <div class="form-group">
+                <label for="choiceC">Answer C</label>
+                <input type="text" id="choiceC" name="choiceC" required>
+            </div>
+
+            <div class="form-group">
+                <label for="choiceD">Answer D</label>
+                <input type="text" id="choiceD" name="choiceD" required>
+            </div>
+
+            <div class="form-group">
+                <label for="correctAnswer">Correct Answer</label>
+                <select id="correctAnswer" name="correctAnswer" required>
+                    <option value="">-- Select Correct Answer --</option>
+                    <option value="A">A</option>
+                    <option value="B">B</option>
+                    <option value="C">C</option>
+                    <option value="D">D</option>
+                </select>
+            </div>
+
+            <div class="form-actions">
+                <button type="submit" class="btn-submit">Update</button>
+            </div>
+        </form>
+        <div class="back-nav">
+            <a href="index.html">
+                <button type="button" class="btn-back">Kembali ke Questions</button>
+            </a>
+        </div>
+    </section>
 </main>
 
 <footer></footer> 
+
+<script>
+    const questionData = {
+        1: {
+            text: 'What does HTML stand for?',
+            A: 'Hyper Text Markup Language',
+            B: 'Home Tool Markup Language',
+            C: 'Hyperlinks and Text Markup Language',
+            D: 'Hyper Text Machine Language',
+            correct: 'A'
+        },
+        2: {
+            text: 'Which CSS rule is used for media queries?',
+            A: '@media',
+            B: 'media',
+            C: 'query',
+            D: 'responsive',
+            correct: 'A'
+        },
+        3: {
+            text: 'How do you make images responsive?',
+            A: 'Set width with px',
+            B: 'Use percentage width',
+            C: 'Use float',
+            D: 'Use background-image',
+            correct: 'B'
+        }
+    };
+
+    function getQueryVariable(variable) {
+        const query = window.location.search.substring(1);
+        const vars = query.split('&');
+        for (let i = 0; i < vars.length; i++) {
+            const pair = vars[i].split('=');
+            if (decodeURIComponent(pair[0]) === variable) {
+                return decodeURIComponent(pair[1]);
+            }
+        }
+        return null;
+    }
+
+    const questionId = getQueryVariable('question') || '1';
+    const question = questionData[questionId] || questionData[1];
+
+    document.getElementById('questionText').textContent = question.text;
+    document.getElementById('choiceA').value = question.A;
+    document.getElementById('choiceB').value = question.B;
+    document.getElementById('choiceC').value = question.C;
+    document.getElementById('choiceD').value = question.D;
+    document.getElementById('correctAnswer').value = question.correct;
+</script>
 </body>
 </html>
