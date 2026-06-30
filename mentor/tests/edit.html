@@ -14,6 +14,7 @@
 <main>
     <section class="tests-section">
         <h1>Edit Test</h1>
+        <p class="page-subtitle">Sesuaikan detail tes dan status publikasi untuk proyek Anda.</p>
         <form class="tests-form" action="index.html" method="get">
             <div class="form-group">
                 <label for="title">Title</label>
@@ -46,45 +47,6 @@
     </section>
 </main>
 
-<footer></footer> 
-
-<script>
-    const testData = {
-        1: {
-            title: 'Dasar Pemrograman',
-            description: 'Test mengukur pemahaman tentang konsep dasar pemrograman termasuk variabel, tipe data, loop, conditional statement, dan fungsi.',
-            status: 'Published'
-        },
-        2: {
-            title: 'Basis Data',
-            description: 'Test mengevaluasi pengetahuan tentang database management, SQL queries, normalisasi, primary key, dan foreign key.',
-            status: 'Published'
-        },
-        3: {
-            title: 'Matematika',
-            description: 'Test yang mencakup operasi aritmatika, persamaan linear, geometri, bilangan prima, dan perbandingan.',
-            status: 'Published'
-        }
-    };
-
-    function getQueryVariable(variable) {
-        const query = window.location.search.substring(1);
-        const vars = query.split('&');
-        for (let i = 0; i < vars.length; i++) {
-            const pair = vars[i].split('=');
-            if (decodeURIComponent(pair[0]) === variable) {
-                return decodeURIComponent(pair[1]);
-            }
-        }
-        return null;
-    }
-
-    const testId = getQueryVariable('id') || '1';
-    const selectedTest = testData[testId] || testData[1];
-
-    document.getElementById('title').value = selectedTest.title;
-    document.getElementById('description').textContent = selectedTest.description;
-    document.getElementById('status').value = selectedTest.status;
-</script>
+<footer></footer>
 </body>
 </html>

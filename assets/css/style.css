@@ -504,11 +504,19 @@ footer {
 .users-section {
     max-width: 1000px;
     margin: 0 auto;
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    padding: 32px;
+    border-radius: 18px;
+    box-shadow: 0 16px 40px rgba(0,0,0,0.06);
     background-color: white;
     overflow-x: auto;
+    border: 1px solid #eee8ff;
+}
+
+.users-section h1,
+.tests-section h1 {
+    font-size: 28px;
+    color: #382165;
+    margin-bottom: 8px;
 }
 
 .users-table {
@@ -538,7 +546,9 @@ footer {
 }
 
 .btn-edit {
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     padding: 8px 12px;
     margin-right: 8px;
     background-color: #6b4fbf;
@@ -546,6 +556,7 @@ footer {
     border-radius: 8px;
     text-decoration: none;
     font-weight: 600;
+    width: auto;
 }
 
 .btn-edit:hover {
@@ -560,6 +571,7 @@ footer {
     border-radius: 8px;
     cursor: pointer;
     font-weight: 600;
+    width: auto;
 }
 
 .btn-delete:hover {
@@ -611,11 +623,12 @@ footer {
 .tests-section {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    padding: 32px;
+    border-radius: 18px;
+    box-shadow: 0 16px 40px rgba(0,0,0,0.06);
     background-color: white;
     overflow-x: auto;
+    border: 1px solid #eee8ff;
 }
 
 .tests-table {
@@ -645,7 +658,9 @@ footer {
 }
 
 .btn-view {
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     padding: 8px 12px;
     margin-right: 8px;
     background-color: #27ae60;
@@ -654,6 +669,7 @@ footer {
     text-decoration: none;
     font-weight: 600;
     font-size: 13px;
+    width: auto;
 }
 
 .btn-view:hover {
@@ -908,9 +924,11 @@ footer {
 
 .page-subtitle {
     font-size: 14px;
-    color: #f0ecff;
-    margin-top: 8px;
+    color: #6a5a96;
+    margin-top: 6px;
+    margin-bottom: 20px;
     max-width: 560px;
+    line-height: 1.6;
 }
 
 /* --- Take Test Page --- */

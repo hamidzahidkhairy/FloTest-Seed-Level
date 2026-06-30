@@ -31,14 +31,43 @@
             <table class="result-table" id="resultTable">
                 <thead>
                     <tr>
-                            <th>Soal</th>
-                            <th>Jawaban Anda</th>
-                            <th>Jawaban Benar</th>
-                            <th>Status</th>
+                        <th>Soal</th>
+                        <th>Jawaban Anda</th>
+                        <th>Jawaban Benar</th>
+                        <th>Status</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <!-- Rows akan dirender lewat JS -->
+                    <tr>
+                        <td>1</td>
+                        <td><span class="answer-cell answer-correct"><span class="answer-icon">✓</span><span class="answer-text">A</span></span></td>
+                        <td><span class="answer-cell answer-correct"><span class="answer-icon">✓</span><span class="answer-text">A</span></span></td>
+                        <td><span class="status-badge status-true">✓ Benar</span></td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td><span class="answer-cell answer-wrong"><span class="answer-icon">✕</span><span class="answer-text">C</span></span></td>
+                        <td><span class="answer-cell answer-correct"><span class="answer-icon">✓</span><span class="answer-text">B</span></span></td>
+                        <td><span class="status-badge status-false">✕ Salah</span></td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td><span class="answer-cell answer-correct"><span class="answer-icon">✓</span><span class="answer-text">A</span></span></td>
+                        <td><span class="answer-cell answer-correct"><span class="answer-icon">✓</span><span class="answer-text">A</span></span></td>
+                        <td><span class="status-badge status-true">✓ Benar</span></td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td><span class="answer-cell answer-wrong"><span class="answer-icon">✕</span><span class="answer-text">D</span></span></td>
+                        <td><span class="answer-cell answer-correct"><span class="answer-icon">✓</span><span class="answer-text">B</span></span></td>
+                        <td><span class="status-badge status-false">✕ Salah</span></td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td><span class="answer-cell answer-correct"><span class="answer-icon">✓</span><span class="answer-text">C</span></span></td>
+                        <td><span class="answer-cell answer-correct"><span class="answer-icon">✓</span><span class="answer-text">C</span></span></td>
+                        <td><span class="status-badge status-true">✓ Benar</span></td>
+                    </tr>
                 </tbody>
             </table>
 
@@ -55,115 +84,6 @@
         <p>&copy; 2026 Flotest</p>
     </footer>
 
-    <script>
-        (function(){
-            const testData = {
-                name: 'HTML Basic Test',
-                questions: [
-                    { text: 'Apa fungsi HTML?' },
-                    { text: 'Elemen apa yang digunakan untuk membuat link?' },
-                    { text: 'Tag mana yang digunakan untuk judul utama?' }
-                ]
-            };
-
-            const correctAnswers = ['A','B','B'];
-            const score = 80; // dummy score
-
-            const scoreText = document.getElementById('scoreText');
-            const testTitle = document.getElementById('testTitle');
-            const tbody = document.querySelector('#resultTable tbody');
-
-            scoreText.textContent = `Nilai: ${score}`;
-            testTitle.textContent = testData.name;
-
-            let userAnswers = [];
-            try {
-                const raw = localStorage.getItem('userAnswers');
-                if (raw) userAnswers = JSON.parse(raw);
-            } catch(e) { userAnswers = []; }
-
-            let correctCount = 0;
-            for (let i = 0; i < testData.questions.length; i++){
-                const tr = document.createElement('tr');
-                const tdIndex = document.createElement('td');
-                tdIndex.textContent = i + 1;
-
-                // User answer cell
-                const tdUser = document.createElement('td');
-                const ua = userAnswers[i] || '-';
-                if (ua === '-' || ua === '') {
-                    tdUser.textContent = '-';
-                } else {
-                    const isCorrect = ua === correctAnswers[i];
-                    const icon = isCorrect ? '✓' : '✕';
-                    const wrapper = document.createElement('span');
-                    wrapper.className = 'answer-cell';
-                    const iconSpan = document.createElement('span');
-                    iconSpan.className = 'answer-icon';
-                    iconSpan.textContent = icon;
-                    const textSpan = document.createElement('span');
-                    textSpan.className = 'answer-text';
-                    textSpan.textContent = ua;
-                    wrapper.appendChild(iconSpan);
-                    wrapper.appendChild(textSpan);
-                    tdUser.appendChild(wrapper);
-                    tdUser.classList.add(isCorrect ? 'answer-correct' : 'answer-wrong');
-                }
-
-                // Correct answer cell
-                const tdCorrect = document.createElement('td');
-                const correct = correctAnswers[i] || '-';
-                if (correct === '-') {
-                    tdCorrect.textContent = '-';
-                } else {
-                    const wrapperC = document.createElement('span');
-                    wrapperC.className = 'answer-cell answer-correct';
-                    const iconSpanC = document.createElement('span');
-                    iconSpanC.className = 'answer-icon';
-                    iconSpanC.textContent = '✓';
-                    const textSpanC = document.createElement('span');
-                    textSpanC.className = 'answer-text';
-                    textSpanC.textContent = correct;
-                    wrapperC.appendChild(iconSpanC);
-                    wrapperC.appendChild(textSpanC);
-                    tdCorrect.appendChild(wrapperC);
-                }
-
-                // Status badge
-                const tdStatus = document.createElement('td');
-                let statusText = '-';
-                let statusClass = '';
-                if (ua && ua !== '-') {
-                    if (ua === correctAnswers[i]) {
-                        statusText = 'Benar';
-                        statusClass = 'status-true';
-                        correctCount += 1;
-                    } else {
-                        statusText = 'Salah';
-                        statusClass = 'status-false';
-                    }
-                }
-                const span = document.createElement('span');
-                span.className = `status-badge ${statusClass}`.trim();
-                if (statusClass === 'status-true') span.textContent = `✓ ${statusText}`;
-                else if (statusClass === 'status-false') span.textContent = `✕ ${statusText}`;
-                else span.textContent = statusText;
-                tdStatus.appendChild(span);
-
-                tr.appendChild(tdIndex);
-                tr.appendChild(tdUser);
-                tr.appendChild(tdCorrect);
-                tr.appendChild(tdStatus);
-                tbody.appendChild(tr);
-            }
-
-            // Calculate and display score percentage if there are questions
-            if (testData.questions.length > 0) {
-                const percent = Math.round((correctCount / testData.questions.length) * 100);
-                scoreText.textContent = `Nilai: ${percent}`;
-            }
-        })();
-    </script>
 
 </body>
 </html>

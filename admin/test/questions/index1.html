@@ -9,64 +9,75 @@
 <body>
    <header>
     <nav></nav>
+
+    
+    <a href="create1.html">
+        <button type="button" class="btn-create">Tambah Question</button>
+    </a>
 </header>
 
 <main>
     <section class="tests-section">
-        <h1>Questions Mentor</h1>
-        <p id="test-title" style="margin-bottom: 20px; color: #555;">Menampilkan questions untuk test mentor: Dasar Pemrograman</p>
+        <h1>Questions</h1>
+        <p id="test-title" style="margin-bottom: 20px; font-size: 16px; color: #555;">Menampilkan questions untuk test: Basis Data</p>
         <table class="tests-table" border="1" cellpadding="8" cellspacing="0">
             <thead>
                 <tr>
                     <th>Number</th>
                     <th>Question Text</th>
+                    <th>Type</th>
                     <th>Actions</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
                     <td>1</td>
-                    <td>Apa yang dimaksud dengan variabel dalam pemrograman?</td>
+                    <td>Apa yang dimaksud dengan database?</td>
+                    <td>Short Answer</td>
                     <td>
-                        <a href="edit.html?test_id=1&question=1" class="btn-edit">Edit</a>
+                        <a href="edit1.html" class="btn-edit">Edit</a>
                         <button type="button" class="btn-delete" disabled>Delete</button>
                     </td>
                 </tr>
                 <tr>
                     <td>2</td>
-                    <td>Tipe data apa yang digunakan untuk menyimpan teks dalam JavaScript?</td>
+                    <td>Sebutkan tiga contoh sistem manajemen basis data (DBMS)!</td>
+                    <td>Multiple Choice</td>
                     <td>
-                        <a href="edit.html?test_id=1&question=2" class="btn-edit">Edit</a>
+                        <a href="edit1.html" class="btn-edit">Edit</a>
                         <button type="button" class="btn-delete" disabled>Delete</button>
                     </td>
                 </tr>
                 <tr>
                     <td>3</td>
-                    <td>Apa perbedaan antara == dan === dalam JavaScript?</td>
+                    <td>Apa fungsi utama dari primary key dalam tabel?</td>
+                    <td>Multiple Choice</td>
                     <td>
-                        <a href="edit.html?test_id=1&question=3" class="btn-edit">Edit</a>
+                        <a href="edit1.html" class="btn-edit">Edit</a>
                         <button type="button" class="btn-delete" disabled>Delete</button>
                     </td>
                 </tr>
                 <tr>
                     <td>4</td>
-                    <td>Jelaskan apa itu loop dan berikan contoh penggunaannya</td>
+                    <td>Jelaskan perbedaan antara SQL dan NoSQL!</td>
+                    <td>Short Answer</td>
                     <td>
-                        <a href="edit.html?test_id=1&question=4" class="btn-edit">Edit</a>
+                        <a href="edit1.html" class="btn-edit">Edit</a>
                         <button type="button" class="btn-delete" disabled>Delete</button>
                     </td>
                 </tr>
                 <tr>
                     <td>5</td>
-                    <td>Apa fungsi dari statement if-else dalam sebuah program?</td>
+                    <td>Apa yang dimaksud dengan normalisasi database?</td>
+                    <td>Short Answer</td>
                     <td>
-                        <a href="edit.html?test_id=1&question=5" class="btn-edit">Edit</a>
+                        <a href="edit1.html" class="btn-edit">Edit</a>
                         <button type="button" class="btn-delete" disabled>Delete</button>
                     </td>
                 </tr>
             </tbody>
         </table>
-        <div class="back-nav" style="margin-top: 24px;">
+        <div class="back-nav">
             <a href="../index.html">
                 <button type="button" class="btn-back">Kembali ke Tests</button>
             </a>

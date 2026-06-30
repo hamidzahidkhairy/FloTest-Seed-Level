@@ -26,77 +26,168 @@
 
     <main>
         <div class="test-container">
-            <!-- Progress Bar -->
             <div class="progress-section">
-                <p class="progress-text" id="progressText">Soal 1 dari 3</p>
+                <p class="progress-text">Soal 1 dari 5</p>
                 <div class="progress-bar">
-                    <div class="progress-fill" id="progressFill" style="width: 33%;"></div>
+                    <div class="progress-fill" style="width: 20%;"></div>
                 </div>
             </div>
 
             <section class="menti-test">
+                <div class="question-number">01</div>
 
-                <!-- Question Number -->
-                <div class="question-number" id="questionNumber">01</div>
-
-                <!-- Test Name -->
                 <div class="test-info">
-                    <h3 id="testName">HTML Basic Test</h3>
+                    <h3>Dasar Pemrograman</h3>
                 </div>
 
-                <!-- Question -->
-                <div class="question-section">
-                    <h2 id="questionText">Apa fungsi HTML?</h2>
-                </div>
+                <form class="options-form" action="result.html" method="get">
+                    <div class="question-section">
+                        <h2>1. Apa yang dimaksud dengan variabel dalam pemrograman?</h2>
+                    </div>
 
-                <!-- Options -->
-                <form class="options-form" id="optionsForm">
                     <label class="option">
-                        <input type="radio" name="jawaban" class="radio-input" value="A">
+                        <input type="radio" name="q1" class="radio-input" value="A">
                         <span class="option-letter">A</span>
-                        <span class="option-text">HyperText Markup Language</span>
+                        <span class="option-text">Nama khusus untuk menyimpan data/nilai</span>
                     </label>
 
                     <label class="option">
-                        <input type="radio" name="jawaban" class="radio-input" value="B">
+                        <input type="radio" name="q1" class="radio-input" value="B">
                         <span class="option-letter">B</span>
-                        <span class="option-text">HyperText Markdown Language</span>
+                        <span class="option-text">Suatu operasi matematika</span>
                     </label>
 
                     <label class="option">
-                        <input type="radio" name="jawaban" class="radio-input" value="C">
+                        <input type="radio" name="q1" class="radio-input" value="C">
                         <span class="option-letter">C</span>
-                        <span class="option-text">HighText Machine Language</span>
+                        <span class="option-text">Tipe error dalam program</span>
                     </label>
 
                     <label class="option">
-                        <input type="radio" name="jawaban" class="radio-input" value="D">
+                        <input type="radio" name="q1" class="radio-input" value="D">
                         <span class="option-letter">D</span>
-                        <span class="option-text">Home Tool Markup Language</span>
+                        <span class="option-text">Fungsi yang tidak penting</span>
                     </label>
-                </form>
 
-                <!-- Navigation Buttons -->
-                <nav class="test-nav">
-                    <button type="button" class="btn-secondary" id="prevButton">
-                        ← Sebelumnya
-                    </button>
+                    <div class="question-section">
+                        <h2>2. Tipe data apa yang digunakan untuk menyimpan teks dalam JavaScript?</h2>
+                    </div>
 
-                    <button type="button" class="btn-primary" id="nextButton">
-                        Selanjutnya →
-                    </button>
-                </nav>
+                    <label class="option">
+                        <input type="radio" name="q2" class="radio-input" value="A">
+                        <span class="option-letter">A</span>
+                        <span class="option-text">number</span>
+                    </label>
 
-                <!-- Submit Button -->
-                <nav class="submit-nav">
-                    <a href="result.html">
+                    <label class="option">
+                        <input type="radio" name="q2" class="radio-input" value="B">
+                        <span class="option-letter">B</span>
+                        <span class="option-text">string</span>
+                    </label>
+
+                    <label class="option">
+                        <input type="radio" name="q2" class="radio-input" value="C">
+                        <span class="option-letter">C</span>
+                        <span class="option-text">text</span>
+                    </label>
+
+                    <label class="option">
+                        <input type="radio" name="q2" class="radio-input" value="D">
+                        <span class="option-letter">D</span>
+                        <span class="option-text">character</span>
+                    </label>
+
+                    <div class="question-section">
+                        <h2>3. Apa perbedaan antara == dan === dalam JavaScript?</h2>
+                    </div>
+
+                    <label class="option">
+                        <input type="radio" name="q3" class="radio-input" value="A">
+                        <span class="option-letter">A</span>
+                        <span class="option-text">== membandingkan nilai, === membandingkan nilai dan tipe data</span>
+                    </label>
+
+                    <label class="option">
+                        <input type="radio" name="q3" class="radio-input" value="B">
+                        <span class="option-letter">B</span>
+                        <span class="option-text">Tidak ada perbedaan</span>
+                    </label>
+
+                    <label class="option">
+                        <input type="radio" name="q3" class="radio-input" value="C">
+                        <span class="option-letter">C</span>
+                        <span class="option-text">=== lebih cepat dari ==</span>
+                    </label>
+
+                    <label class="option">
+                        <input type="radio" name="q3" class="radio-input" value="D">
+                        <span class="option-letter">D</span>
+                        <span class="option-text">== untuk string, === untuk angka</span>
+                    </label>
+
+                    <div class="question-section">
+                        <h2>4. Apa fungsi dari statement if-else dalam sebuah program?</h2>
+                    </div>
+
+                    <label class="option">
+                        <input type="radio" name="q4" class="radio-input" value="A">
+                        <span class="option-letter">A</span>
+                        <span class="option-text">Untuk mengulangi kode</span>
+                    </label>
+
+                    <label class="option">
+                        <input type="radio" name="q4" class="radio-input" value="B">
+                        <span class="option-letter">B</span>
+                        <span class="option-text">Untuk membuat keputusan berdasarkan kondisi</span>
+                    </label>
+
+                    <label class="option">
+                        <input type="radio" name="q4" class="radio-input" value="C">
+                        <span class="option-letter">C</span>
+                        <span class="option-text">Untuk mendeklarasikan variabel</span>
+                    </label>
+
+                    <label class="option">
+                        <input type="radio" name="q4" class="radio-input" value="D">
+                        <span class="option-letter">D</span>
+                        <span class="option-text">Untuk membuat fungsi</span>
+                    </label>
+
+                    <div class="question-section">
+                        <h2>5. Bagaimana cara membuat array dalam JavaScript?</h2>
+                    </div>
+
+                    <label class="option">
+                        <input type="radio" name="q5" class="radio-input" value="A">
+                        <span class="option-letter">A</span>
+                        <span class="option-text">array = {}</span>
+                    </label>
+
+                    <label class="option">
+                        <input type="radio" name="q5" class="radio-input" value="B">
+                        <span class="option-letter">B</span>
+                        <span class="option-text">array = ()</span>
+                    </label>
+
+                    <label class="option">
+                        <input type="radio" name="q5" class="radio-input" value="C">
+                        <span class="option-letter">C</span>
+                        <span class="option-text">array = []</span>
+                    </label>
+
+                    <label class="option">
+                        <input type="radio" name="q5" class="radio-input" value="D">
+                        <span class="option-letter">D</span>
+                        <span class="option-text">array = &lt;&gt;</span>
+                    </label>
+
+                    <nav class="submit-nav">
                         <button type="submit" class="btn-submit">
                             ✓ Submit Jawaban
                         </button>
-                    </a>
-                </nav>
+                    </nav>
+                </form>
 
-                <!-- Back Button -->
                 <nav class="back-nav">
                     <a href="dashboard.html">
                         <button type="button" class="btn-back">
@@ -104,7 +195,6 @@
                         </button>
                     </a>
                 </nav>
-
             </section>
         </div>
     </main>
@@ -112,155 +202,5 @@
     <footer>
         <p>&copy; 2026 Flotest</p>
     </footer>
-
-    <script>
-        const testData = {
-            name: 'Dasar Pemrograman',
-            questions: [
-                {
-                    text: 'Apa yang dimaksud dengan variabel dalam pemrograman?',
-                    choices: {
-                        A: 'Nama khusus untuk menyimpan data/nilai',
-                        B: 'Suatu operasi matematika',
-                        C: 'Tipe error dalam program',
-                        D: 'Fungsi yang tidak penting'
-                    }
-                },
-                {
-                    text: 'Tipe data apa yang digunakan untuk menyimpan teks dalam JavaScript?',
-                    choices: {
-                        A: 'number',
-                        B: 'string',
-                        C: 'text',
-                        D: 'character'
-                    }
-                },
-                {
-                    text: 'Apa perbedaan antara == dan === dalam JavaScript?',
-                    choices: {
-                        A: '== membandingkan nilai, === membandingkan nilai dan tipe data',
-                        B: 'Tidak ada perbedaan',
-                        C: '=== lebih cepat dari ==',
-                        D: '== untuk string, === untuk angka'
-                    }
-                },
-                {
-                    text: 'Apa fungsi dari statement if-else dalam sebuah program?',
-                    choices: {
-                        A: 'Untuk mengulangi kode',
-                        B: 'Untuk membuat keputusan berdasarkan kondisi',
-                        C: 'Untuk mendeklarasikan variabel',
-                        D: 'Untuk membuat fungsi'
-                    }
-                },
-                {
-                    text: 'Bagaimana cara membuat array dalam JavaScript?',
-                    choices: {
-                        A: 'array = {}',
-                        B: 'array = ()',
-                        C: 'array = []',
-                        D: 'array = <>',
-                    }
-                }
-            ]
-        };
-
-        const progressText = document.getElementById('progressText');
-        const progressFill = document.getElementById('progressFill');
-        const questionNumber = document.getElementById('questionNumber');
-        const questionText = document.getElementById('questionText');
-        const testName = document.getElementById('testName');
-        const optionsForm = document.getElementById('optionsForm');
-        const prevButton = document.getElementById('prevButton');
-        const nextButton = document.getElementById('nextButton');
-
-        let currentQuestion = 0;
-        const totalQuestions = testData.questions.length;
-
-        // load existing answers or initialize
-        let userAnswers = new Array(totalQuestions).fill('');
-        try {
-            const raw = localStorage.getItem('userAnswers');
-            if (raw) {
-                const parsed = JSON.parse(raw);
-                for (let i = 0; i < Math.min(parsed.length, totalQuestions); i++) {
-                    if (parsed[i]) userAnswers[i] = parsed[i];
-                }
-            }
-        } catch (e) { userAnswers = new Array(totalQuestions).fill(''); }
-
-        function persistAnswers() {
-            try { localStorage.setItem('userAnswers', JSON.stringify(userAnswers)); } catch(e){}
-        }
-
-        function renderQuestion(index) {
-            const current = testData.questions[index];
-            questionNumber.textContent = String(index + 1).padStart(2, '0');
-            testName.textContent = testData.name;
-            questionText.textContent = current.text;
-            progressText.textContent = `Soal ${index + 1} dari ${totalQuestions}`;
-            progressFill.style.width = `${Math.round(((index + 1) / totalQuestions) * 100)}%`;
-
-            const optionElements = optionsForm.querySelectorAll('.option');
-            const choices = current.choices;
-            const letters = Object.keys(choices);
-            optionElements.forEach((option, i) => {
-                const letter = letters[i];
-                option.querySelector('.option-letter').textContent = letter;
-                option.querySelector('.option-text').textContent = choices[letter];
-                option.querySelector('input').value = letter;
-            });
-
-            // restore previously selected answer
-            optionsForm.querySelectorAll('input').forEach(input => {
-                input.checked = (input.value === userAnswers[index]);
-            });
-            optionsForm.querySelectorAll('.option').forEach(item => {
-                const inp = item.querySelector('input');
-                if (inp && inp.checked) item.classList.add('option-selected');
-                else item.classList.remove('option-selected');
-            });
-
-            prevButton.disabled = index === 0;
-            nextButton.textContent = index === totalQuestions - 1 ? 'Selesaikan →' : 'Selanjutnya →';
-            nextButton.disabled = index === totalQuestions - 1;
-        }
-
-        optionsForm.addEventListener('click', event => {
-            const optionElement = event.target.closest('.option');
-            if (!optionElement) return;
-            optionsForm.querySelectorAll('.option').forEach(item => item.classList.remove('option-selected'));
-            optionElement.classList.add('option-selected');
-            const input = optionElement.querySelector('input');
-            if (input) {
-                input.checked = true;
-                userAnswers[currentQuestion] = input.value;
-                persistAnswers();
-            }
-        });
-
-        prevButton.addEventListener('click', () => {
-            if (currentQuestion === 0) return;
-            currentQuestion -= 1;
-            renderQuestion(currentQuestion);
-        });
-
-        nextButton.addEventListener('click', () => {
-            if (currentQuestion < totalQuestions - 1) {
-                currentQuestion += 1;
-                renderQuestion(currentQuestion);
-            }
-        });
-
-        // ensure answers are persisted when clicking submit
-        const submitBtn = document.querySelector('.btn-submit');
-        if (submitBtn) {
-            submitBtn.addEventListener('click', () => {
-                persistAnswers();
-            });
-        }
-
-        renderQuestion(currentQuestion);
-    </script>
 </body>
 </html>

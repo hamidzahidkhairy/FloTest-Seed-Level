@@ -28,7 +28,7 @@
                 <tr>
                     <td>Dasar Pemrograman</td>
                     <td>anto Mentor</td>
-                    <td><span class="status-active">Active</span></td>
+                    <td><span class="status-published">Published</span></td>
                     <td>5</td>
                     <td>
                         <a href="questions/index.html?test_id=1" class="btn-view">View Questions</a>
@@ -39,22 +39,22 @@
                 <tr>
                     <td>Basis Data</td>
                     <td>sabar Mentor</td>
-                    <td><span class="status-active">Active</span></td>
+                    <td><span class="status-archived">Archived</span></td>
                     <td>5</td>
                     <td>
-                        <a href="questions/index.html?test_id=2" class="btn-view">View Questions</a>
-                        <a href="edit.html?id=2" class="btn-edit">Edit</a>
+                        <a href="questions/index1.html" class="btn-view">View Questions</a>
+                        <a href="questions/edit1.html" class="btn-edit">Edit</a>
                         <a href="#" class="btn-delete" data-id="2">Delete</a>
                     </td>
                 </tr>
                 <tr>
                     <td>Matematika</td>
                     <td>ratno Mentor</td>
-                    <td><span class="status-inactive">Inactive</span></td>
-                    <td>12</td>
+                    <td><span class="status-draft">Draft</span></td>
+                    <td>5</td>
                     <td>
-                        <a href="questions/index.html?test_id=3" class="btn-view">View Questions</a>
-                        <a href="edit.html?id=3" class="btn-edit">Edit</a>
+                        <a href="questions/index2.html" class="btn-view">View Questions</a>
+                        <a href="questions/edit2.html" class="btn-edit">Edit</a>
                         <a href="#" class="btn-delete" data-id="3">Delete</a>
                     </td>
                 </tr>
@@ -68,23 +68,6 @@
     </section>
 </main>
 
-<footer></footer> 
-
-<script>
-    // Handle delete button
-    document.querySelectorAll('.btn-delete').forEach(button => {
-        button.addEventListener('click', function(e) {
-            e.preventDefault();
-            const testId = this.getAttribute('data-id');
-            const testTitle = this.closest('tr').querySelector('td').textContent;
-            
-            if (confirm(`Yakin ingin menghapus test "${testTitle}"?`)) {
-                // Remove row from table
-                this.closest('tr').remove();
-                alert(`Test "${testTitle}" berhasil dihapus!`);
-            }
-        });
-    });
-</script>
+<footer></footer>
 </body>
 </html>

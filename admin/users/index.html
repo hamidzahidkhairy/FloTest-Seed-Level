@@ -109,23 +109,6 @@
     </section>
 </main>
 
-<footer>FloTest 2026</footer> 
-
-<script>
-    // Handle delete button
-    document.querySelectorAll('.btn-delete').forEach(button => {
-        button.addEventListener('click', function(e) {
-            e.preventDefault();
-            const userId = this.getAttribute('data-id');
-            const userName = this.closest('tr').querySelector('td').textContent;
-            
-            if (confirm(`Yakin ingin menghapus user ${userName}?`)) {
-                // Remove row from table
-                this.closest('tr').remove();
-                alert(`User ${userName} berhasil dihapus!`);
-            }
-        });
-    });
-</script>
+<footer>FloTest 2026</footer>
 </body>
 </html>
