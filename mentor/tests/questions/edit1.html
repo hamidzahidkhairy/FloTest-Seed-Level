@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../../assets/css/style.css">
+</head>
+<body>
+   <header>
+    <nav></nav>
+</header>
+
+<main>
+    <section class="tests-section">
+        <h1>Edit Question</h1>
+        <p class="page-subtitle">Ubah pertanyaan dan opsi jawaban agar sesuai dengan materi yang ingin diuji.</p>
+        <form class="tests-form" action="index.html" method="get">
+            <div class="form-group">
+                <label for="questionText">Question Text</label>
+                <textarea id="questionText" name="questionText" rows="4" required>What does HTML stand for?</textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="choiceA">Answer A</label>
+                <input type="text" id="choiceA" name="choiceA" value="Hyper Text Markup Language" required>
+            </div>
+
+            <div class="form-group">
+                <label for="choiceB">Answer B</label>
+                <input type="text" id="choiceB" name="choiceB" value="Home Tool Markup Language" required>
+            </div>
+
+            <div class="form-group">
+                <label for="choiceC">Answer C</label>
+                <input type="text" id="choiceC" name="choiceC" value="Hyperlinks and Text Markup Language" required>
+            </div>
+
+            <div class="form-group">
+                <label for="choiceD">Answer D</label>
+                <input type="text" id="choiceD" name="choiceD" value="Hyper Text Machine Language" required>
+            </div>
+
+            <div class="form-group">
+                <label for="correctAnswer">Correct Answer</label>
+                <select id="correctAnswer" name="correctAnswer" required>
+                    <option value="">-- Select Correct Answer --</option>
+                    <option value="A" selected>A</option>
+                    <option value="B">B</option>
+                    <option value="C">C</option>
+                    <option value="D">D</option>
+                </select>
+            </div>
+
+            <div class="form-actions">
+                <button type="submit" class="btn-submit">Update</button>
+            </div>
+        </form>
+        <div class="back-nav">
+            <a href="index1.html">
+                <button type="button" class="btn-back">Kembali ke Questions</button>
+            </a>
+        </div>
+    </section>
+</main>
+
+<footer></footer>
+</body>
+</html>
